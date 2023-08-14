@@ -2,3 +2,5 @@ Gorro
 Campera
 Plata
 Botas
+Medias
+Documentos
