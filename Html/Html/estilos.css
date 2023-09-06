@@ -1,0 +1,41 @@
+body {
+    width: 100%;
+    height: 100%;
+    padding: auto;
+    background: linear-gradient(to right, #61eec4, #549b89);
+    margin-top: 1px;
+    margin-bottom: 1px;
+    display: flex;
+
+}
+header{
+    display: flex;
+    align-self: top, first baseline;
+    justify-content: center;
+    padding: auto;
+}
+h1 {
+    font-style: normal;
+    color: #6d5a67;
+}
+h2 {
+    font-style:inherit;
+    color:rgb(54, 54, 54)
+}
+li {
+    font-style: oblique;
+
+}
+
+img {
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #6d5a67;
+    display: flex;
+    justify-items: right;
+    
+}
+
+footer {
+    align-self: last baseline;
+}
