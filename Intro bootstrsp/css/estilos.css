@@ -1,0 +1,15 @@
+#{margin: auto;
+
+}
+
+body{background-color: bgGradient='linear(red.100 0%, orange.100 25%, yellow.100 50%)';
+
+}
+
+aside{background-color: green;
+    border: coral;
+}
+
+.column1{background-color: antiquewhite;
+
+}
