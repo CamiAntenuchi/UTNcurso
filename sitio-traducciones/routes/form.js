@@ -21,7 +21,22 @@ router.post('/', async (req, res, next) => {
     subject: 'Contacto desde la web',
     html: name + " " + " quiere que se le envie informacion a: " + email + ". <br> Ademas, hizo el siguiente comentario: " + message
   }
-}
-)
+
+  var transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS 
+    }
+  })
+
+   var info = await transporter.sendMail(obj);
+
+  res.render ('form', {
+    message: 'Su mensaje se envio correctamente',
+  });
+
+});
 
 module.exports = router;
