@@ -3,11 +3,11 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/form', function(req, res, next) {
   res.render('form', { title: 'Express' });
 });
 
-router.post('/', async (req, res, next) => {
+router.post('/form', async (req, res, next) => {
 
   console.log(req.body)
 
@@ -22,7 +22,7 @@ router.post('/', async (req, res, next) => {
     html: name + " " + " quiere que se le envie informacion a: " + email + ". <br> Ademas, hizo el siguiente comentario: " + message
   }
 
-  var transporter = nodemailer.createTransport({
+  var transport = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,
     auth: {
