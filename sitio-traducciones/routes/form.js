@@ -3,13 +3,11 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 
 /* GET home page. */
-router.get('/form', function(req, res, next) {
-  res.render('form', { title: 'Express' });
+router.get('/', function(req, res, next) {
+res.render('form', { title: 'Express' });
 });
 
 router.post('/form', async (req, res, next) => {
-
-  console.log(req.body)
 
   var name = req.body.name;
   var email = req.body.email;
@@ -31,7 +29,7 @@ router.post('/form', async (req, res, next) => {
     }
   })
 
-   var info = await transporter.sendMail(obj);
+   var info = await transport.sendMail(obj);
 
   res.render ('form', {
     message: 'Su mensaje se envio correctamente',
