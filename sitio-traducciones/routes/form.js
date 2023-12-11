@@ -7,7 +7,9 @@ router.get('/', function(req, res, next) {
 res.render('form', { title: 'Express' });
 });
 
-router.post('/form', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
+
+  console.log(req.body)
 
   var name = req.body.name;
   var email = req.body.email;
